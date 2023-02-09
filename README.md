@@ -4,7 +4,7 @@
 ## WHERE ALL FANS HAVE A VOICE
 ## Date: 2/17/23
 ### By: Eduardo Puerta
-#### [GitHub](https://github.com/eduardopuerta9)
+#### [GitHub](https://github.com/eduardopuerta9) | [Trello](https://trello.com/b/iWgs0s9C/premier-league-blog)
 
 ### ***Description***
 #### A space where all Premier League fans from all of the world can come in and express themselves!
