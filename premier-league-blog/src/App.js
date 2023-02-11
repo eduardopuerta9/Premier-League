@@ -5,6 +5,7 @@ import About from './pages/About'
 import Header from './components/Header'
 import ArsenalPage from './pages/Arsenal Page'
 import AstonVillaPage from './pages/AstonVillaPage'
+import BournemouthPage from './pages/BournemouthPage'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/arsenal" element={<ArsenalPage />} />
             <Route path="/astonvilla" element={<AstonVillaPage />} />
+            <Route path="/bournemouth" element={<BournemouthPage />} />
           </Routes>
         </main>
       </div>
