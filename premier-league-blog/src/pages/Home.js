@@ -13,6 +13,7 @@ import Everton from '../components/Everton'
 import Fulham from '../components/Fulham'
 import Leeds from '../components/Leeds'
 import Leicester from '../components/Leicester'
+import Liverpool from '../components/Liverpool'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
@@ -70,6 +71,7 @@ const Home = () => {
           <Fulham />
           <Leeds />
           <Leicester />
+          <Liverpool />
         </section>
       </div>
       <div className="gamecontent"></div>
