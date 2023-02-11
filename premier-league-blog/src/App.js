@@ -15,6 +15,7 @@ import FulhamPage from './pages/FulhamPage'
 import LeedsPage from './pages/LeedsPage'
 import LeicesterPage from './pages/LeicesterPage'
 import LiverpoolPage from './pages/LiverpoolPage'
+import ManchesterCityPage from './pages/ManchesterCityPage'
 const App = () => {
   return (
     <div>
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/leeds" element={<LeedsPage />} />
             <Route path="/leicester" element={<LeicesterPage />} />
             <Route path="/liverpool" element={<LiverpoolPage />} />
+            <Route path="/manchestercity" element={<ManchesterCityPage />} />
           </Routes>
         </main>
       </div>
