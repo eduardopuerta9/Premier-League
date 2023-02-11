@@ -10,6 +10,7 @@ import BrentfordPage from './pages/BrentfordPage'
 import BrightonPage from './pages/BrightonPage'
 import ChelseaPage from './pages/ChelseaPage'
 import CrystalPalacePage from './pages/CrystalPalacePage'
+import EvertonPage from './pages/EvertonPage'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/brighton" element={<BrightonPage />} />
             <Route path="/chelsea" element={<ChelseaPage />} />
             <Route path="/crystalpalace" element={<CrystalPalacePage />} />
+            <Route path="/everton" element={<EvertonPage />} />
           </Routes>
         </main>
       </div>
