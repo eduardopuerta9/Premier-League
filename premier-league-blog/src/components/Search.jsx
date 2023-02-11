@@ -7,7 +7,7 @@ const Search = (props) => {
     <input type="text"
     name="search"
     value={props.value}
-    placeholder="Search Games"
+    placeholder="Search Teams"
     onChange={props.onChange}/>
    <button type="submit">Search</button>
    </form>

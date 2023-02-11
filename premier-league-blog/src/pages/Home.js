@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Search from '../components/Search'
+import AstonVila from '../components/Aston Villa'
 
-import GenreCard from '../components/GenreCard'
+import Arsenal from '../components/Arsenal'
 import { API_KEY } from '../globals'
+import AstonVilla from '../components/Aston Villa'
+
 const Home = () => {
   const [genres, setGenres] = useState([])
   const [searchResults, setSearchResults] = useState([])
@@ -49,7 +52,8 @@ const Home = () => {
       <div className="genres">
         <h2>Teams</h2>
         <section className="container-grid">
-          <GenreCard />
+          <Arsenal />
+          <AstonVilla />
         </section>
       </div>
       <div className="gamecontent"></div>

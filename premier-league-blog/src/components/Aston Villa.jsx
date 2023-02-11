@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-const GenreCard = (props) => {
+const AstonVilla = (props) => {
 
   return (
 
@@ -8,16 +8,15 @@ const GenreCard = (props) => {
       
         
       <div className="img-wrapper">
-        <Link to={`/view/games/${props.id}`}>
+        <Link to={`/astonvilla`}>
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/640px-Arsenal_FC.svg.png"></img>
-        
         </Link>
       <div className="info-wrapper flex-col">
-       Arsenal
+       Aston Villa
       </div>
       </div>
-        
     </div>
+    
 
   )
 }
@@ -25,4 +24,4 @@ const GenreCard = (props) => {
   
 
 
-export default GenreCard
+export default AstonVilla
