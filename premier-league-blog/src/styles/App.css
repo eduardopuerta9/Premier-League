@@ -85,7 +85,7 @@ button {
 }
 
 .card {
-  max-width: 300px;
+  max-width: auto;
   max-height: 380px;
   border-radius: 4px;
   background-color: #1b1b1b;
@@ -104,7 +104,7 @@ button {
 }
 
 .card img {
-  width: 100%;
+  width: 70%;
   height: 200px;
 }
 

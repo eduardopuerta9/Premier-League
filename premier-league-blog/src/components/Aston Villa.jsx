@@ -9,7 +9,7 @@ const AstonVilla = (props) => {
         
       <div className="img-wrapper">
         <Link to={`/astonvilla`}>
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/640px-Arsenal_FC.svg.png"></img>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/1200px-Aston_Villa_FC_crest_%282016%29.svg.png"></img>
         </Link>
       <div className="info-wrapper flex-col">
        Aston Villa

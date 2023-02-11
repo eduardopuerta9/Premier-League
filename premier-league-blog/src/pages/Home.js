@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Search from '../components/Search'
-import AstonVila from '../components/Aston Villa'
-
 import Arsenal from '../components/Arsenal'
 import { API_KEY } from '../globals'
 import AstonVilla from '../components/Aston Villa'
+import Bournemouth from '../components/Bournemouth'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
@@ -54,6 +53,7 @@ const Home = () => {
         <section className="container-grid">
           <Arsenal />
           <AstonVilla />
+          <Bournemouth />
         </section>
       </div>
       <div className="gamecontent"></div>
