@@ -5,6 +5,7 @@ import Arsenal from '../components/Arsenal'
 import { API_KEY } from '../globals'
 import AstonVilla from '../components/Aston Villa'
 import Bournemouth from '../components/Bournemouth'
+import Brentford from '../components/Brentford'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
@@ -54,6 +55,7 @@ const Home = () => {
           <Arsenal />
           <AstonVilla />
           <Bournemouth />
+          <Brentford />
         </section>
       </div>
       <div className="gamecontent"></div>
