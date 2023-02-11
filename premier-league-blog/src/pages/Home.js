@@ -10,6 +10,7 @@ import Brighton from '../components/Brighton'
 import Chelsea from '../components/Chelsea'
 import CrystalPalace from '../components/Crystal Palace'
 import Everton from '../components/Everton'
+import Fulham from '../components/Fulham'
 
 const Home = () => {
   const [genres, setGenres] = useState([])
@@ -64,6 +65,7 @@ const Home = () => {
           <Chelsea />
           <CrystalPalace />
           <Everton />
+          <Fulham />
         </section>
       </div>
       <div className="gamecontent"></div>
