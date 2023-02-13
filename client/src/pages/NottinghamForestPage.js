@@ -1,8 +1,18 @@
+import Form from '../components/Form'
 const NottinghamForestPage = () => {
   return (
     <div className="nottingham forest">
       <h1>
         <center>Nottingham Forest</center>
+        <center>
+          {' '}
+          <img
+            center
+            src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/393.png"
+            height={80}
+          ></img>
+        </center>
+        <Form />
       </h1>
       <h3>
         <center></center>
