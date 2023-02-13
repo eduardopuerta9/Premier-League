@@ -4,6 +4,14 @@ const AstonVillaPage = () => {
     <div className="astonvilla">
       <h1>
         <center>Aston Vila</center>
+        <center>
+          {' '}
+          <img
+            center
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/1200px-Aston_Villa_FC_crest_%282016%29.svg.png"
+            height={80}
+          ></img>
+        </center>
         <Form />
       </h1>
       <h3>
