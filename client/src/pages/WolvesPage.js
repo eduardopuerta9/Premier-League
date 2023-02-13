@@ -3,7 +3,7 @@ const WolvesPage = () => {
   return (
     <div className="wolves">
       <h1>
-        <center>Wolv</center>
+        <center>Wolves</center>
         <center>
           {' '}
           <img
