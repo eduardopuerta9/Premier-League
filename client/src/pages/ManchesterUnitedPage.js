@@ -1,4 +1,3 @@
-import Form from '../components/Form'
 const ManchesterUnitedPage = () => {
   return (
     <div className="manchester united">
@@ -12,7 +11,6 @@ const ManchesterUnitedPage = () => {
             height={80}
           ></img>
         </center>
-        <Form />
       </h1>
       <h3>
         <center></center>

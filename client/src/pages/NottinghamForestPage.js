@@ -1,4 +1,3 @@
-import Form from '../components/Form'
 const NottinghamForestPage = () => {
   return (
     <div className="nottingham forest">
@@ -12,7 +11,6 @@ const NottinghamForestPage = () => {
             height={80}
           ></img>
         </center>
-        <Form />
       </h1>
       <h3>
         <center></center>

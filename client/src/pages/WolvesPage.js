@@ -1,4 +1,3 @@
-import Form from '../components/Form'
 const WolvesPage = () => {
   return (
     <div className="wolves">
@@ -12,7 +11,6 @@ const WolvesPage = () => {
             height={80}
           ></img>
         </center>
-        <Form />
       </h1>
       <h3>
         <center></center>
