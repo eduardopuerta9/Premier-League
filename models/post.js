@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const issueSchema = new Schema(
+const postSchema = new Schema(
   {
     issueType: { type: String, required: true },
     subject: { type: String, required: true },
@@ -9,4 +9,4 @@ const issueSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = issueSchema
+module.exports = postSchema

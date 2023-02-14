@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const issueSchema = require('./issue')
+const postSchema = require('./post')
 
-const Issue = mongoose.model('Issue', issueSchema)
+const Post = mongoose.model('Post', postSchema)
 
 module.exports = {
-  Issue
+  Post
 }
