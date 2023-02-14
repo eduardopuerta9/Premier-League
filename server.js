@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001
 
 const db = require('./db')
 const { Post } = require('./models')
+const { Review } = require('./models')
 
 const app = express()
 
@@ -24,12 +25,19 @@ app.post('/posts', async (req, res) => {
   res.send(newPost)
 })
 
-app.delete('/delete/:id', (req, res) => {
-  post
-    .findByIdAndDelete({ _id: req.params.id })
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err))
+app.delete('/posts', async (req, res) => {
+  let deletePost = await Post.delete(req._id)
+  res.send(deletePost)
   window.location.reload()
+})
+app.get('/reviews', async (req, res) => {
+  let reviews = await Review.find({})
+  res.send(reviews)
+})
+
+app.post('/reviews', async (req, res) => {
+  let newReview = await Review.create(req.body)
+  res.send(newReview)
 })
 
 app.listen(PORT, () => {

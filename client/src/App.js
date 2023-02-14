@@ -24,6 +24,7 @@ import TottenhamPage from './pages/TottenhamPage'
 import WestHamPage from './pages/WestHamPage'
 import WolvesPage from './pages/WolvesPage'
 import Blog from './pages/Blog'
+import Stadium from './pages/Stadium'
 const App = () => {
   return (
     <div>
@@ -31,6 +32,7 @@ const App = () => {
         <Header />
         <main>
           <Routes>
+            <Route path="/stadium" element={<Stadium />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

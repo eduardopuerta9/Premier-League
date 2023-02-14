@@ -1,23 +1,23 @@
-import Form from '../components/Form'
+import Review from '../components/Review'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-const Blog = () => {
-  const [posts, setPosts] = useState([])
+const Stadium = () => {
+  const [reviews, setReviews] = useState([])
 
-  const getPosts = async () => {
+  const getReviews = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/posts')
-      setPosts(res.data)
+      let res = await axios.get('http://localhost:3001/reviews')
+      setReviews(res.data)
     } catch (err) {
       console.log(err)
     }
   }
 
   useEffect(() => {
-    getPosts()
+    getReviews()
   }, [])
 
-  const deletePost = (id) => {
+  const deleteReview = (id) => {
     console.log(id)
 
     axios
@@ -26,21 +26,21 @@ const Blog = () => {
       .catch((err) => console.log(err))
   }
   return (
-    <div className="blog">
+    <div className="stadium">
       <h1>
-        <center>Blog Page</center>
+        <center>Stadium Page</center>
         <center>
           {' '}
           <img
             center
-            src="https://i.ytimg.com/vi/2KLn8K_70uA/hqdefault.jpg"
+            src="https://media.istockphoto.com/id/1020966590/photo/cat-in-a-tie-with-a-white-keyboard.jpg?s=612x612&w=0&k=20&c=HAPUVZst99TuNtMj5k34ZacaS96hg0G0bl-dWt1jEYE="
             height={200}
           ></img>
-          <Form getPosts={getPosts} />
+          <Review getReviews={getReviews} />
           <h5>Posts:</h5>
-          {posts.map((post) => (
+          {reviews.map((review) => (
             <div
-              key={post._id}
+              key={review._id}
               style={{
                 border: 'solid white 2px',
                 borderRadius: '8px',
@@ -48,9 +48,9 @@ const Blog = () => {
                 padding: '1 rem'
               }}
             >
-              <h2>Team: {post.team}</h2>
-              <h3>Subject: {post.subject}</h3>
-              <p>Message: {post.message}</p>
+              <h2>Stadium: {review.stadium}</h2>
+              <h3>Subject: {review.subject}</h3>
+              <p>Message: {review.message}</p>
               <div
                 style={{
                   display: 'flex',
@@ -62,7 +62,7 @@ const Blog = () => {
                   UPDATE
                 </button>
                 <button
-                  onClick={() => deletePost(post._id)}
+                  onClick={() => deleteReview(review._id)}
                   style={{ width: '60%', marginRight: '1rem' }}
                 >
                   DELETE
@@ -79,4 +79,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Stadium

@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Form = (props) => {
   const initialState = {
-    issueType: '',
+    team: '',
     subject: '',
     message: ''
   }
@@ -28,8 +28,8 @@ const handleSubmit = async (event) => {
 
   return (
     <form onSubmit={handleSubmit}>
-    <label htmlFor="issueType">Post</label>
-    <select id="issueType"onChange={handleChange} value={formState.issueType}>
+    <label htmlFor="team">Post</label>
+    <select id="team"onChange={handleChange} value={formState.team}>
       <option value="Arsenal">Arsenal</option>
       <option value="Aston Villa">Aston Villa</option>
       <option value="Bournemouth">Bournemouth</option>
