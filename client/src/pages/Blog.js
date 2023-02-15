@@ -1,6 +1,9 @@
 import Form from '../components/Form'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+
+import EditBlog from '../components/EditBlog'
+import EditableBlog from '../components/EditableBlog'
 const Blog = () => {
   const [posts, setPosts] = useState([])
 
@@ -16,15 +19,22 @@ const Blog = () => {
   useEffect(() => {
     getPosts()
   }, [])
+  const [editPostData, setEditPostData] = useState({
+    team: '',
+    subject: '',
+    message: ''
+  })
+  const [editPostId, setEditPostId] = useState(null)
 
-  const deletePost = (id) => {
-    console.log(id)
-
-    axios
-      .delete(`/delete/${id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err))
+  const handleEditPost = (event) => {
+    event.preventDefault()
   }
+
+  const handleEditClick = (event, post) => {
+    event.preventDefault()
+    setEditPostId(post._id)
+  }
+
   return (
     <div className="blog">
       <h1>
@@ -39,35 +49,12 @@ const Blog = () => {
           <Form getPosts={getPosts} />
           <h5>Posts:</h5>
           {posts.map((post) => (
-            <div
-              key={post._id}
-              style={{
-                border: 'solid white 2px',
-                borderRadius: '8px',
-                marginBottom: '1.5rem',
-                padding: '1 rem'
-              }}
-            >
-              <h2>Team: {post.team}</h2>
-              <h3>Subject: {post.subject}</h3>
-              <p>Message: {post.message}</p>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <button style={{ width: '60%', marginRight: '3rem' }}>
-                  UPDATE
-                </button>
-                <button
-                  onClick={() => deletePost(post._id)}
-                  style={{ width: '60%', marginRight: '1rem' }}
-                >
-                  DELETE
-                </button>
-              </div>
+            <div key={post._id}>
+              {editPostId === post._id ? (
+                <EditableBlog />
+              ) : (
+                <EditBlog post={post} handleEditClick={handleEditClick} />
+              )}
             </div>
           ))}
         </center>
