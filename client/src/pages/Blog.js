@@ -6,6 +6,10 @@ import EditBlog from '../components/EditBlog'
 import EditableBlog from '../components/EditableBlog'
 const Blog = () => {
   const [posts, setPosts] = useState([])
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const getPosts = async () => {
     try {
