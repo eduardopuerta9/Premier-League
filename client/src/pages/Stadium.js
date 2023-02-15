@@ -12,19 +12,15 @@ const Stadium = () => {
       console.log(err)
     }
   }
+  const deleteReview = (id) => {
+    axios.delete(`http://localhost:3001/reviews/delete/${id}`).then(() => {})
+    window.location.reload()
+  }
 
   useEffect(() => {
     getReviews()
   }, [])
 
-  const deleteReview = (id) => {
-    console.log(id)
-
-    axios
-      .delete(`/delete/${id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err))
-  }
   return (
     <div className="stadium">
       <h1>
@@ -61,12 +57,7 @@ const Stadium = () => {
                 <button style={{ width: '60%', marginRight: '3rem' }}>
                   UPDATE
                 </button>
-                <button
-                  onClick={() => deleteReview(review._id)}
-                  style={{ width: '60%', marginRight: '1rem' }}
-                >
-                  DELETE
-                </button>
+                <button onClick={() => deleteReview(review._id)}>DELETE</button>
               </div>
             </div>
           ))}

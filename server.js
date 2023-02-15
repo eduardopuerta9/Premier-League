@@ -40,6 +40,11 @@ app.post('/reviews', async (req, res) => {
   res.send(newReview)
 })
 
+app.delete('/reviews/delete/:id', (req, res) => {
+  Review.findByIdAndDelete({ _id: req.params.id })
+    .then((doc) => console.log(doc))
+    .catch((err) => console.log(err))
+})
 app.listen(PORT, () => {
   console.log(`Connected to port:`, PORT)
 })
