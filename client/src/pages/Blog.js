@@ -15,7 +15,10 @@ const Blog = () => {
       console.log(err)
     }
   }
-
+  const deletePost = (id) => {
+    axios.delete(`http://localhost:3001/posts/delete/${id}`).then(() => {})
+    window.location.reload()
+  }
   useEffect(() => {
     getPosts()
   }, [])
@@ -55,6 +58,7 @@ const Blog = () => {
               ) : (
                 <EditBlog post={post} handleEditClick={handleEditClick} />
               )}
+              <button onClick={() => deletePost(post._id)}>DELETE</button>
             </div>
           ))}
         </center>

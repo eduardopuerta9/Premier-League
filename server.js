@@ -25,10 +25,10 @@ app.post('/posts', async (req, res) => {
   res.send(newPost)
 })
 
-app.delete('/posts', async (req, res) => {
-  let deletePost = await Post.delete(req._id)
-  res.send(deletePost)
-  window.location.reload()
+app.delete('/posts/delete/:id', (req, res) => {
+  Post.findByIdAndDelete({ _id: req.params.id })
+    .then((doc) => console.log(doc))
+    .catch((err) => console.log(err))
 })
 app.get('/reviews', async (req, res) => {
   let reviews = await Review.find({})
