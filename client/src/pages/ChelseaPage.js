@@ -9,7 +9,7 @@ const ChelseaPage = () => {
           <img
             center
             src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
-            height={80}
+            height={120}
           ></img>
           <br></br>
           <h3>Founded: 1905 </h3>

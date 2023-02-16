@@ -8,7 +8,7 @@ const EvertonPage = () => {
           <img
             center
             src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/1200px-Everton_FC_logo.svg.png"
-            height={80}
+            height={120}
           ></img>
         </center>
       </h1>

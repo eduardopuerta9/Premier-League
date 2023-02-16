@@ -8,7 +8,7 @@ const BrightonPage = () => {
           <img
             center
             src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/640px-Brighton_%26_Hove_Albion_logo.svg.png"
-            height={80}
+            height={120}
           ></img>
           <br></br>
           <h3>Founded: 1901 </h3>
