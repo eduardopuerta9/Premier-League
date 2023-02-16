@@ -27,6 +27,8 @@ app.post('/posts', async (req, res) => {
 
 app.delete('/posts/delete/:id', (req, res) => {
   Post.findByIdAndDelete({ _id: req.params.id })
+    .then((doc) => console.log(doc))
+    .catch((err) => console.log(err))
 })
 
 app.put('/posts/put/:id', async (req, res) => {
@@ -53,6 +55,8 @@ app.post('/reviews', async (req, res) => {
 
 app.delete('/reviews/delete/:id', (req, res) => {
   Review.findByIdAndDelete({ _id: req.params.id })
+    .then((doc) => console.log(doc))
+    .catch((err) => console.log(err))
 })
 
 app.put('/reviews/put/:id', async (req, res) => {
