@@ -1,8 +1,8 @@
-import Form from '../components/Form'
+import Updatepost from '../components/Updatepost'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 const NewUpdatePost = (props) => {
   const initialState = {
     team: '',
@@ -15,9 +15,6 @@ const NewUpdatePost = (props) => {
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
-  useEffect(() => {
-    loadPost()
-  }, [])
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -26,11 +23,18 @@ const NewUpdatePost = (props) => {
     setFormState(initialState)
     props.getPosts()
   }
-  const loadPost = async () => {
-    const result = await axios.get(`http://localhost:3001/posts/${id}`)
-    setFormState(result.data)
-  }
 
-  return <Form />
+  return (
+    <div className="updatedPost">
+      <center>
+        <Updatepost />
+        <br></br>
+        <Link to={'/blog'}>
+          <button type="button">See Changes</button>
+        </Link>
+      </center>
+    </div>
+  )
 }
+
 export default NewUpdatePost

@@ -18,9 +18,7 @@ const Blog = () => {
       setPosts(res.data)
     } catch (err) {}
   }
-  const updatePost = (id) => {
-    axios.put(`http://localhost:3001/posts/put/${id}`).then(() => {})
-  }
+
   const deletePost = (id) => {
     axios.delete(`http://localhost:3001/posts/delete/${id}`).then(() => {})
     window.location.reload()
@@ -47,7 +45,7 @@ const Blog = () => {
   return (
     <div className="blog">
       <h1>
-        <center>Blog Page</center>
+        <center>Team Blog</center>
         <center>
           {' '}
           <img
@@ -64,7 +62,7 @@ const Blog = () => {
               ) : (
                 <EditBlog post={post} handleEditClick={handleEditClick} />
               )}
-              <Link to={`/editBlog/${post._id}`}>
+              <Link to={`/posts/${post._id}`}>
                 <button type="button">UPDATE</button>
               </Link>
               <br></br>

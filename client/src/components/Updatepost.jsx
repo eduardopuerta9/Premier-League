@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
-const Form = (props) => {
-  const initialState = {
+const Updatepost = (props) => {
+  const updatedState = {
     team: '',
     subject: '',
     message: ''
   }
-  const [formState, setFormState] = useState(initialState)
+  const { id } = useParams()
+  
+  const [formState, setFormState] = useState(updatedState)
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -15,11 +18,11 @@ const Form = (props) => {
   
 const handleSubmit = async (event) => {
   event.preventDefault()
-  await axios.post('http://localhost:3001/posts', formState)
+  await axios.put(`http://localhost:3001/posts/${id}`, formState)
 
   console.log(formState)
 
-  setFormState(initialState)
+  setFormState(updatedState)
   props.getPosts()
 };
 
@@ -27,7 +30,7 @@ const handleSubmit = async (event) => {
 
   return (
     <form onSubmit={handleSubmit}>
-    <label htmlFor="team">Team</label>
+    <label htmlFor="team">TEAM</label>
     <select id="team"onChange={handleChange} value={formState.team}>
       <option value="Arsenal">Arsenal</option>
       <option value="Aston Villa">Aston Villa</option>
@@ -54,9 +57,10 @@ const handleSubmit = async (event) => {
     <input type="text" id="subject" onChange={handleChange} value={formState.subject} />
     <label htmlFor="message">Message</label>
     <textarea id="message" cols="30" rows="10" onChange={handleChange} value={formState.message}></textarea>
-    <button type="submit">POST</button>
+    <br></br>
+    <button type="submit">UPDATE</button>
   </form>
   )
 }
 
-export default Form
+export default Updatepost

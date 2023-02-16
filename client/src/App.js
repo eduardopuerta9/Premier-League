@@ -34,8 +34,8 @@ const App = () => {
         <Header />
         <main>
           <Routes>
-            <Route path="/editStadium/:id" element={<NewUpdateStadium />} />
-            <Route path="/editBlog/:id" element={<NewUpdatePost />} />
+            <Route path="/reviews/:id" element={<NewUpdateStadium />} />
+            <Route path="/posts/:id" element={<NewUpdatePost />} />
             <Route path="/stadium" element={<Stadium />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/" element={<Home />} />

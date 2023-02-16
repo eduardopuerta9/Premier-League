@@ -23,7 +23,7 @@ const Stadium = () => {
   return (
     <div className="stadium">
       <h1>
-        <center>Stadium Page</center>
+        <center>Stadium Blog</center>
         <center>
           {' '}
           <img
