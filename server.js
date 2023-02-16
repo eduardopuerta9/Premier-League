@@ -30,6 +30,12 @@ app.delete('/posts/delete/:id', (req, res) => {
     .then((doc) => console.log(doc))
     .catch((err) => console.log(err))
 })
+
+app.put('/posts/put/:id', (req, res) => {
+  Post.findByIdAndUpdate({ _id: req.params.id })
+    .then((doc) => console.log(doc))
+    .catch((err) => console.log(err))
+})
 app.get('/reviews', async (req, res) => {
   let reviews = await Review.find({})
   res.send(reviews)

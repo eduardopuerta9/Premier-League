@@ -8,7 +8,7 @@ const EditBlog = ({ post, handleEditClick }) => {
     <h2>Team: {post.team}</h2>
     <h3>Subject: {post.subject}</h3>
     <p>Message: {post.message}</p>
-    <button type="button" onClick={(event)=> handleEditClick(event, post)}>Edit</button>
+   
     </div>
   )
 }

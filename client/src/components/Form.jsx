@@ -12,19 +12,18 @@ const Form = (props) => {
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
-  // Event Handler: a callback function to be run when the event is observed
+  
 const handleSubmit = async (event) => {
-  // we always need to stop the browser from submitting the form or the page will be refreshed.
   event.preventDefault()
   await axios.post('http://localhost:3001/posts', formState)
-  // do something with the data in the component state
+
   console.log(formState)
-  // clear the form
+
   setFormState(initialState)
   props.getPosts()
 };
 
-// Event Listener: tells the browser which event to listen for on which element and what to do when the event happens
+
 
   return (
     <form onSubmit={handleSubmit}>

@@ -1,6 +1,7 @@
 import Form from '../components/Form'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 import EditBlog from '../components/EditBlog'
 import EditableBlog from '../components/EditableBlog'
@@ -18,6 +19,9 @@ const Blog = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+  const updatePost = (id) => {
+    axios.put(`http://localhost:3001/posts/put/${id}`).then(() => {})
   }
   const deletePost = (id) => {
     axios.delete(`http://localhost:3001/posts/delete/${id}`).then(() => {})
@@ -62,6 +66,10 @@ const Blog = () => {
               ) : (
                 <EditBlog post={post} handleEditClick={handleEditClick} />
               )}
+              <Link to={`/editBlog/${post._id}`}>
+                <button type="button">UPDATE</button>
+              </Link>
+              <br></br>
               <button onClick={() => deletePost(post._id)}>DELETE</button>
             </div>
           ))}
