@@ -14,7 +14,7 @@
 
 ### **_Description_**
 
-#### A webiste where premier league fans can interact by giving their opinions about their teams.
+#### A webiste where premier league fans can interact by giving their opinions about their teams and stadium experiences.
 
 ---
 
