@@ -15,7 +15,7 @@ const LiverpoolPage = () => {
           <h3>Current Squad:</h3>
           <img
             center
-            src="https://static.wikia.nocookie.net/liverpoolfc/images/6/6d/22-23squad.jpeg/revision/latest/scale-to-width-down/1200?cb=20221004154139"
+            src="https://i.ytimg.com/vi/dqgy-OfZcyk/maxresdefault.jpg"
             height={240}
           ></img>
           <h3>Stadium: Anfield</h3>
