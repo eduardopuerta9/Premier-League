@@ -29,7 +29,7 @@ const Home = () => {
     setSearchQuery(event.target.value)
   }
   useEffect(() => {}, [])
-  console.log(searchQuery)
+
   return (
     <div>
       <div className="search">

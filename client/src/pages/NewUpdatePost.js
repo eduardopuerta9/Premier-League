@@ -23,8 +23,6 @@ const NewUpdatePost = (props) => {
     event.preventDefault()
     await axios.put(`http://localhost:3001/posts/${id}`, formState)
 
-    console.log(formState)
-
     setFormState(initialState)
     props.getPosts()
   }

@@ -25,8 +25,8 @@ import WestHamPage from './pages/WestHamPage'
 import WolvesPage from './pages/WolvesPage'
 import Blog from './pages/Blog'
 import Stadium from './pages/Stadium'
-import EditBlog from './components/EditBlog'
 import NewUpdatePost from './pages/NewUpdatePost'
+import NewUpdateStadium from './pages/NewUpdateStadium'
 const App = () => {
   return (
     <div>
@@ -34,6 +34,7 @@ const App = () => {
         <Header />
         <main>
           <Routes>
+            <Route path="/editStadium/:id" element={<NewUpdateStadium />} />
             <Route path="/editBlog/:id" element={<NewUpdatePost />} />
             <Route path="/stadium" element={<Stadium />} />
             <Route path="/blog" element={<Blog />} />

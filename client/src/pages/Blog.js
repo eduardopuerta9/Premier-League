@@ -16,9 +16,7 @@ const Blog = () => {
     try {
       let res = await axios.get('http://localhost:3001/posts')
       setPosts(res.data)
-    } catch (err) {
-      console.log(err)
-    }
+    } catch (err) {}
   }
   const updatePost = (id) => {
     axios.put(`http://localhost:3001/posts/put/${id}`).then(() => {})

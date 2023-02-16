@@ -1,6 +1,7 @@
 import Review from '../components/Review'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 const Stadium = () => {
   const [reviews, setReviews] = useState([])
 
@@ -8,9 +9,7 @@ const Stadium = () => {
     try {
       let res = await axios.get('http://localhost:3001/reviews')
       setReviews(res.data)
-    } catch (err) {
-      console.log(err)
-    }
+    } catch (err) {}
   }
   const deleteReview = (id) => {
     axios.delete(`http://localhost:3001/reviews/delete/${id}`).then(() => {})
@@ -39,14 +38,11 @@ const Stadium = () => {
               <h2>Stadium: {review.stadium}</h2>
               <h3>Subject: {review.subject}</h3>
               <p>Message: {review.message}</p>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'space-between'
-                }}
-              >
-                <button>UPDATE</button>
+              <div>
+                <Link to={`/editStadium/${review._id}`}>
+                  <button type="button">UPDATE</button>
+                </Link>
+                <br></br>
                 <button onClick={() => deleteReview(review._id)}>DELETE</button>
               </div>
             </div>
