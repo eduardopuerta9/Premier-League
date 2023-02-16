@@ -31,7 +31,7 @@ const Blog = () => {
     subject: '',
     message: ''
   })
-  const [editPostId, setEditPostId] = useState(null)
+  const [editPostId, setEditPostId] = useState('')
 
   const handleEditPost = (event) => {
     event.preventDefault()

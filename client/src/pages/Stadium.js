@@ -39,7 +39,7 @@ const Stadium = () => {
               <h3>Subject: {review.subject}</h3>
               <p>Message: {review.message}</p>
               <div>
-                <Link to={`/editStadium/${review._id}`}>
+                <Link to={`/reviews/${review._id}`}>
                   <button type="button">UPDATE</button>
                 </Link>
                 <br></br>

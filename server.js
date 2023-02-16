@@ -27,14 +27,19 @@ app.post('/posts', async (req, res) => {
 
 app.delete('/posts/delete/:id', (req, res) => {
   Post.findByIdAndDelete({ _id: req.params.id })
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err))
 })
 
-app.put('/posts/put/:id', (req, res) => {
-  Post.findByIdAndUpdate({ _id: req.params.id })
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err))
+app.put('/posts/put/:id', async (req, res) => {
+  try {
+    const updatedPost = await Post.findByIdAndUpdate(
+      { _id: req.params.id },
+      req.body,
+      { new: true }
+    )
+    res.status(200).json(updatedPost)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
 })
 app.get('/reviews', async (req, res) => {
   let reviews = await Review.find({})
@@ -48,8 +53,19 @@ app.post('/reviews', async (req, res) => {
 
 app.delete('/reviews/delete/:id', (req, res) => {
   Review.findByIdAndDelete({ _id: req.params.id })
-    .then((doc) => console.log(doc))
-    .catch((err) => console.log(err))
+})
+
+app.put('/reviews/put/:id', async (req, res) => {
+  try {
+    const updatedReview = await Review.findByIdAndUpdate(
+      { _id: req.params.id },
+      req.body,
+      { new: true }
+    )
+    res.status(200).json(updatedReview)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
 })
 app.listen(PORT, () => {
   console.log(`Connected to port:`, PORT)

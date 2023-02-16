@@ -3,14 +3,14 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
 const Updatepost = (props) => {
-  const updatedState = {
+  const post = {
     team: '',
     subject: '',
     message: ''
   }
   const { id } = useParams()
   
-  const [formState, setFormState] = useState(updatedState)
+  const [formState, setFormState] = useState(post)
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -18,11 +18,11 @@ const Updatepost = (props) => {
   
 const handleSubmit = async (event) => {
   event.preventDefault()
-  await axios.put(`http://localhost:3001/posts/${id}`, formState)
+  await axios.put(`http://localhost:3001/posts/put/${id}`, formState)
 
   console.log(formState)
 
-  setFormState(updatedState)
+  setFormState(post)
   props.getPosts()
 };
 

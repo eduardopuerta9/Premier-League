@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
-const Review = (props) => {
-  const initialState = {
+const Updatereview = (props) => {
+  const review = {
     stadium: '',
     subject: '',
     message: ''
   }
-  const [formState, setFormState] = useState(initialState)
+  const { id } = useParams()
+  const [formState, setFormState] = useState(review)
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -16,11 +18,11 @@ const Review = (props) => {
 const handleSubmit = async (event) => {
 
   event.preventDefault()
-  await axios.post('http://localhost:3001/reviews', formState)
+  await axios.put(`http://localhost:3001/reviews/put/${id}`, formState)
   
   console.log(formState)
  
-  setFormState(initialState)
+  setFormState(review)
   props.getReviews()
 };
 
@@ -59,4 +61,4 @@ const handleSubmit = async (event) => {
   )
 }
 
-export default Review
+export default Updatereview
