@@ -8,7 +8,23 @@ const LiverpoolPage = () => {
           <img
             center
             src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png"
-            height={80}
+            height={120}
+          ></img>
+          <br></br>
+          <h3>Founded: 1892 </h3>
+          <h3>Current Squad:</h3>
+          <img
+            center
+            src="https://static.wikia.nocookie.net/liverpoolfc/images/6/6d/22-23squad.jpeg/revision/latest/scale-to-width-down/1200?cb=20221004154139"
+            height={240}
+          ></img>
+          <h3>Stadium: Anfield</h3>
+          <h4>Location: Liverpool, England</h4>
+          <h4>Capacity: 54,000</h4>
+          <img
+            center
+            src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0001/81/thumb_80700_default_news_size_5.jpeg"
+            height={300}
           ></img>
         </center>
       </h1>
