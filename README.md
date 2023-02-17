@@ -33,11 +33,30 @@
 ---
 
 ### **_Screenshots_**
+###### Home
+<img width="500" alt="Screen Shot 2023-02-17 at 9 25 16 AM" src="https://user-images.githubusercontent.com/122240360/219682994-470658b6-5ac8-4d19-995f-1523cd67ce3f.png">
+
+###### Team Blog
+<img width="500" alt="Screen Shot 2023-02-17 at 9 26 54 AM" src="https://user-images.githubusercontent.com/122240360/219683417-f4ec6838-2fb5-4faa-b4b0-332764c03c1f.png">
+
+###### Stadium Blog
+<img width="500" alt="Screen Shot 2023-02-17 at 9 28 08 AM" src="https://user-images.githubusercontent.com/122240360/219683520-0ebe047e-7b66-4185-b440-67424ccd4d47.png">
+
+
 
 ---
 
 ### **_Future Updates_**
-
+- [ ] Add an API
+- [ ] Add comments under posts
+- [ ] Add more informationabout each team
+- [ ] Add live standings
+- [ ] Add live matches
+- [ ] Add a search bar
 ---
 
 ### **_Credits_**
+##### RAWG: [RAWG](https://github.com/eduardopuerta9/u2_hw_RAWG_router)
+##### Mongoose Plants: [Mongoose Plants](https://github.com/eduardopuerta9/u2_hw_mongoose_plants)
+##### Mongoose Plants: [Mongoose Plants](https://github.com/eduardopuerta9/u2_hw_mongoose_plants)
+##### React: [React](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
