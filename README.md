@@ -10,7 +10,7 @@
 
 ### By: Eduardo Puerta
 
-#### [GitHub](https://github.com/eduardopuerta9) | [Trello](https://trello.com/b/iWgs0s9C/premier-league-blog)
+#### [GitHub](https://github.com/eduardopuerta9) | [Trello](https://trello.com/b/iWgs0s9C/premier-league-blog) | [Component Hierarcy Diagram](https://lucid.app/lucidchart/197d23ac-4e5d-4253-8345-e5f0e3a178d7/edit?invitationId=inv_ed460a29-e964-44db-9d39-86c26d1c5a0a&page=0_0#) | [ERD](https://app.diagrams.net/#G1TWLSuZLQwTbeONNzSoVwwOUQ3Vh-wTBP)
 
 ### **_Description_**
 
