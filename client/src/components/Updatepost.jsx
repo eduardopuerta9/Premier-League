@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+
 const Updatepost = (props) => {
   const post = {
     team: '',
@@ -58,7 +59,9 @@ const handleSubmit = async (event) => {
     <label htmlFor="message">Message</label>
     <textarea id="message" cols="30" rows="10" onChange={handleChange} value={formState.message}></textarea>
     <br></br>
+    
     <button type="submit">UPDATE</button>
+   
   </form>
   )
 }

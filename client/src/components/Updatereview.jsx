@@ -56,7 +56,7 @@ const handleSubmit = async (event) => {
     <input type="text" id="subject" onChange={handleChange} value={formState.subject} />
     <label htmlFor="message">Message</label>
     <textarea id="message" cols="30" rows="10" onChange={handleChange} value={formState.message}></textarea>
-    <button type="submit">Send</button>
+    <button type="submit">UPDATE</button>
   </form>
   )
 }
