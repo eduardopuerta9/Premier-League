@@ -49,7 +49,7 @@
 ### **_Future Updates_**
 - [ ] Add an API
 - [ ] Add comments under posts
-- [ ] Add more informationabout each team
+- [ ] Add more information about each team
 - [ ] Add live standings
 - [ ] Add live matches
 - [ ] Add a search bar
