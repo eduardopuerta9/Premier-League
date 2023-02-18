@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001
 const db = require('./db')
 const { Post } = require('./models')
 const { Review } = require('./models')
+const { Team } = require('./models')
 
 const app = express()
 
@@ -71,6 +72,23 @@ app.put('/reviews/put/:id', async (req, res) => {
     return res.status(500).send(error.message)
   }
 })
+app.get('/teams', async (req, res) => {
+  let teams = await Team.find({})
+  res.send(teams)
+})
+app.put('/teams/put/:id', async (req, res) => {
+  try {
+    const updatedTeam = await Team.findByIdAndUpdate(
+      { _id: req.params.id },
+      req.body,
+      { new: true }
+    )
+    res.status(200).json(updatedTeam)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Connected to port:`, PORT)
 })
