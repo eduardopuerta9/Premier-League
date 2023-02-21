@@ -34,7 +34,7 @@
 
 ### **_Screenshots_**
 ###### Home
-<img width="500" alt="Screen Shot 2023-02-17 at 9 25 16 AM" src="https://user-images.githubusercontent.com/122240360/219682994-470658b6-5ac8-4d19-995f-1523cd67ce3f.png">
+<img width="500" alt="Screen Shot 2023-02-17 at 9 25 16 AM" src="https://user-images.githubusercontent.com/122240360/220215856-e7cc909b-7566-41f0-9a90-97de7abab2da.png">
 
 ###### Team Blog
 <img width="500" alt="Screen Shot 2023-02-17 at 9 26 54 AM" src="https://user-images.githubusercontent.com/122240360/219683417-f4ec6838-2fb5-4faa-b4b0-332764c03c1f.png">
