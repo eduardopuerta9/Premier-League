@@ -18,7 +18,7 @@ const NewUpdateReview = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.put(`http://localhost:3001/reviews/${id}`, formState)
+    await axios.put(`https://prem-api.onrender.com/reviews/${id}`, formState)
 
     setFormState(initialState)
     props.getPosts()

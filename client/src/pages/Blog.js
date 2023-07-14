@@ -14,13 +14,15 @@ const Blog = () => {
 
   const getPosts = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/posts')
+      let res = await axios.get('https://prem-api.onrender.com/posts')
       setPosts(res.data)
     } catch (err) {}
   }
 
   const deletePost = (id) => {
-    axios.delete(`http://localhost:3001/posts/delete/${id}`).then(() => {})
+    axios
+      .delete(`https://prem-api.onrender.com/posts/delete/${id}`)
+      .then(() => {})
     window.location.reload()
   }
   useEffect(() => {

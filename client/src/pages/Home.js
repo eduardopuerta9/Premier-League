@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Team from './Team'
 
-import { API_KEY } from '../globals'
-
 const Home = () => {
   const initalState = [
     {
@@ -23,7 +21,7 @@ const Home = () => {
     setSearchQuery(event.target.value)
   }
   const getTeams = async () => {
-    const response = await axios.get(`http://localhost:3001/teams/`)
+    const response = await axios.get(`https://prem-api.onrender.com/teams/`)
     console.log(response.data)
     setTeams(response.data)
     console.log(teams)

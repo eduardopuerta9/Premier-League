@@ -18,7 +18,7 @@ const NewUpdatePost = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await axios.put(`http://localhost:3001/posts/${id}`, formState)
+    await axios.put(`https://prem-api.onrender.com/posts/${id}`, formState)
 
     setFormState(initialState)
     props.getPosts()

@@ -7,12 +7,14 @@ const Stadium = () => {
 
   const getReviews = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/reviews')
+      let res = await axios.get('https://prem-api.onrender.com/reviews')
       setReviews(res.data)
     } catch (err) {}
   }
   const deleteReview = (id) => {
-    axios.delete(`http://localhost:3001/reviews/delete/${id}`).then(() => {})
+    axios
+      .delete(`https://prem-api.onrender.com/reviews/delete/${id}`)
+      .then(() => {})
     window.location.reload()
   }
 
