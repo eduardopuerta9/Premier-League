@@ -25,7 +25,7 @@ const Stadium = () => {
   return (
     <div className="stadium">
       <h1>
-        <center>Stadium Blog</center>
+        <center>Stadiu Blog</center>
         <center>
           {' '}
           <img
